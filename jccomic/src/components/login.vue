@@ -3,7 +3,6 @@
     <mt-header title="登录">
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
-        <mt-button @click="handleClose">关闭</mt-button>
       </router-link>
       <router-link><mt-button icon="" slot="right">快速注册</mt-button></router-link>
     </mt-header>
@@ -43,6 +42,10 @@ export default {
     width: 100%;
     overflow: auto;
     height:100vh;
+  }
+  
+  .login .mint-header-button.is-left{
+    background: #fff;
   }
 
 

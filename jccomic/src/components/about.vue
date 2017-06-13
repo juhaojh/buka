@@ -52,7 +52,8 @@ export default {
     return {
       msg: '',
       arr:"",
-      list:""
+      list:"",
+      value:""
     }
   }
  

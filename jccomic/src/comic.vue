@@ -1,11 +1,10 @@
 <template>
 	<div id="comic">
-    <mt-header fixed title="">
-        <span></span>    
+    <mt-header fixed title="">          
       <mt-button  slot="right">
         <span class="right-btn"></span>
       </mt-button>
-    </mt-header>
+    </mt-header>   
     <div id="box">
       <router-view></router-view>
     </div>

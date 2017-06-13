@@ -57,13 +57,11 @@ export default {
   .mint-swipe img{
     width: 100%;
   }
-  .mint-header-button.is-left {
-      background: url('http://m.buka.cn/static/img/logo_2x.png') no-repeat 0 5px;
-      background-size: 100%;
-      width: 32px;
-      height: 40px;
-  }
-  .mint-header-button.is-right .right-btn{
+.mint-header.is-fixed{
+  background:#fff url('http://m.buka.cn/static/img/logo_2x.png') no-repeat 0 5px;
+  background-size: 23%;
+}
+  header .mint-header-button.is-right .right-btn{
       background: url('http://m.buka.cn/static/img/research_2x.png') no-repeat;
       background-size: 100%;
       width: 26px;

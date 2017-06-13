@@ -1,7 +1,7 @@
 <template>
     <main>
       <mt-swipe :auto="4000">
-        <mt-swipe-item v-for="item in swipeImg"><img :src="item" alt=""></mt-swipe-item>
+        <mt-swipe-item v-for="item in swipeImg"><img :src="item" alt="" ></mt-swipe-item>
       </mt-swipe>
       <section>
       <h2>每周推荐</h2>
@@ -44,7 +44,6 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: '',
       arr:"",
       list:"",
       newarr:"",
@@ -80,6 +79,7 @@ export default {
         this.newarr = data
       })
     },
+    
 }
 </script>
 
