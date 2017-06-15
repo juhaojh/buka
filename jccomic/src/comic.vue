@@ -1,9 +1,10 @@
 <template>
 	<div id="comic">
     <mt-header fixed title="">          
-      <mt-button  slot="right">
-        <span class="right-btn"></span>
-      </mt-button>
+        <mt-button  slot="right">
+          <router-link to="/search"><span class="right-btn"></span></router-link>
+        </mt-button>
+      
     </mt-header>   
     <div id="box">
       <router-view></router-view>
@@ -39,7 +40,7 @@ export default {
   name: 'jccomic',
   data(){
    return{
-     selected:""
+     selected:"主页"
     } 
   }
 }
