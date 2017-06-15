@@ -3,10 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import About from '@/components/about'
 import Info from '@/components/info'
-import Register from '@/components/register'
 import Login from '@/components/login'
-import Search from '@/components/search'
-import Xtx from '@/components/xtx'
 import Classify from '@/components/classify'
 import Comic from '../comic'
 import ComicInfo from '@/components/comicInfo'
@@ -44,29 +41,9 @@ export default new Router({
       redirect: { name: 'home' }
     },
     {
-      path: '/search',
-      name: 'search',
-      component: Search
-    },
-    {
-      path: '/xtx/:id',
-      name: 'xtx',
-      component: Xtx
-    },
-    {
       path: '/login',
       name: 'login',
       component: Login
-    },
-    {
-      path: '/login/:id',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
     },
   ]
 })

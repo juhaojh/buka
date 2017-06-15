@@ -3,8 +3,7 @@
     <header id="header" class="">
       <div class="touxiang"></div>
       <router-link  to="/login"><mt-button type="primary" size="small">立即登录</mt-button></router-link>
-      <router-link to="/register"><mt-button type="default" size="small">快速注册</mt-button>
-      </router-link>
+      <mt-button type="default" size="small">快速注册</mt-button>
     </header>
     <main>
       <mt-cell title="本地漫画">
@@ -33,15 +32,14 @@
       </mt-cell>
       <mt-cell title="夜间模式">
         <img slot="icon" src="../../static/images/1.jpg" width="20" height="21">
-        <mt-switch v-model="value" @change="getnight"></mt-switch>
+        <mt-switch v-model="value"></mt-switch>
       </mt-cell>
       <mt-cell title="设置">
         <img slot="icon" src="../../static/images/1.jpg" width="20" height="21">
        
       </mt-cell>
-      
     </main>
-      
+
   </div>
   
 </template>
@@ -55,17 +53,7 @@ export default {
       msg: '',
       arr:"",
       list:"",
-      value:false,
-      status:""
-    }
-  },
-  methods:{
-    getnight(){
-      if(this.value){
-        this.status = "ok";
-      }else{
-        this.status = "";
-      }
+      value:""
     }
   }
  
@@ -104,16 +92,6 @@ export default {
     margin-top: 5px;
     height: 20px!important;
     font-size: 12px
-  }
-  a{
-    font-size: 14px;
-  }
-  .blackbox{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(103, 89, 88, .5)
-
   }
   main{
       flex: 1;
