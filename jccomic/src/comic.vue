@@ -19,14 +19,14 @@
       
         <mt-tab-item id="分类">
           <router-link to="/info">
-          分类
+            分类
           </router-link>
         </mt-tab-item>
       
       
         <mt-tab-item id="我的">
          <router-link to="/about">
-          我的
+            我的
          </router-link>
         </mt-tab-item>
      
@@ -39,7 +39,7 @@ export default {
   name: 'jccomic',
   data(){
    return{
-     selected:""
+     selected:"主页"
     } 
   }
 }

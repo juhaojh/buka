@@ -1,13 +1,19 @@
 <template>
     <main>
       <mt-swipe :auto="4000">
-        <mt-swipe-item v-for="item in swipeImg"><img :src="item" alt="" ></mt-swipe-item>
+        <mt-swipe-item v-for="item in swipeImg">
+          <router-link to="./comicInfo">
+             <img :src="item" alt="" >
+          </router-link> 
+        </mt-swipe-item>
       </mt-swipe>
       <section>
       <h2>每周推荐</h2>
           <ul>
             <li v-for="item in arr">
+            <router-link :to="{ name: 'comicInfo', params:{id:item.id}}">
               <img :src="item.cover_url"  alt=""> 
+            </router-link>
               <p> {{ item.title }}</p>
               <p class="tit">{{ item.short_desc }}</p>
             </li>          
@@ -17,7 +23,9 @@
       <h2>VIP特权</h2>
           <ul>
             <li v-for="item in list">
-              <img :src="item.cover_url"  alt=""> 
+              <router-link :to="{ name: 'comicInfo', params:{id:item.id}}">
+                <img :src="item.cover_url"  alt=""> 
+              </router-link>
               <p> {{ item.title }}</p>
               <p class="tit">{{ item.short_desc }}</p>
             </li>          
@@ -27,7 +35,9 @@
       <h2>新作上线</h2>
           <ul>
             <li v-for="item in newarr">
-              <img :src="item.cover_url"  alt=""> 
+              <router-link :to="{ name: 'comicInfo', params:{id:item.id}}">
+                <img :src="item.cover_url"  alt=""> 
+              </router-link> 
               <p> {{ item.title }}</p>
               <p class="tit">{{ item.short_desc }}</p>
             </li>          
@@ -63,7 +73,6 @@ export default {
         return res.data.list
       }).then((data)=> {
         this.arr = data
-       
       }),
       //vip http://m.ac.qq.com/Recommend/get/?num=6&adpos=1242&pool_id=204&t=1497313867286&
       Vue.axios.get("http://m.ac.qq.com/Recommend/get/?num=6&adpos=1242&pool_id=204&t=1497313867286&").then((res)=> {
@@ -79,7 +88,7 @@ export default {
         this.newarr = data
       })
     },
-    
+   
 }
 </script>
 

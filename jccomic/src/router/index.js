@@ -4,7 +4,9 @@ import Home from '@/components/home'
 import About from '@/components/about'
 import Info from '@/components/info'
 import Login from '@/components/login'
+import Classify from '@/components/classify'
 import Comic from '../comic'
+import ComicInfo from '@/components/comicInfo'
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +19,9 @@ export default new Router({
         {path:"home",
          name:"home",
         component:Home},
+        {path:"comicInfo/:id",
+         name:"comicInfo",
+        component:ComicInfo},
         {
           path: 'about',
           name: 'about',
@@ -26,6 +31,11 @@ export default new Router({
           path: 'info',
           name: 'info',
           component: Info
+        },
+        {
+          path: 'classify',
+          name: 'classify',
+          component: Classify
         },
       ],
       redirect: { name: 'home' }
