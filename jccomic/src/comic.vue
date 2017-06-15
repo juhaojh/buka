@@ -2,7 +2,7 @@
 	<div id="comic">
     <mt-header fixed title="">          
       <mt-button  slot="right">
-        <span class="right-btn"></span>
+        <router-link to="/search"><span class="right-btn"></span></router-link>
       </mt-button>
     </mt-header>   
     <div id="box">
