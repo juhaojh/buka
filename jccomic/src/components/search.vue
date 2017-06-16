@@ -7,9 +7,10 @@
       <mt-button @click="getsearch" slot="right">搜索</mt-button>
       </header>
       <ol class="ulo">
-        <router-link to="/comicInfo"><li v-for="it in list">
-          {{it.title}}
-        </li>
+        <router-link :to="{ name:'comicInfo', params:{id:123} }">
+          <li v-for="it in list">
+            {{it.title}}
+          </li>
         </router-link>
       </ol>
       <main>

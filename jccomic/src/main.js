@@ -8,7 +8,7 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import  '../static/iconfont/iconfont.css'
-
+import Jquery from '../static/js/jquery-1.8.3.js'
 
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
@@ -24,6 +24,7 @@ Vue.component(Field.name, Field);
 Vue.use(VueAxios, axios);
 Vue.component(Navbar.name, Navbar);
 Vue.use(Lazyload);
+Vue.use(Jquery);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
