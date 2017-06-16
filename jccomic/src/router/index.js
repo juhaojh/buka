@@ -59,14 +59,13 @@ export default new Router({
       component: Login
     },
     {
-      path: '/login/:id',
-      name: 'login',
-      component: Login
-    },
-    {
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {path:"/comicInfo",
+       name:"comicInfo",
+      component:ComicInfo
     },
    
   ]

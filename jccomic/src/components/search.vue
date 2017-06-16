@@ -3,9 +3,15 @@
       <header>
         <router-link to="/" slot="left"><mt-button  icon="back">返回</mt-button>
         </router-link>
-      <input type="text" placeholder="热门">
-      <mt-button icon="" slot="right">搜索</mt-button>
+      <input v-model="txt" type="text" placeholder="热门">
+      <mt-button @click="getsearch" slot="right">搜索</mt-button>
       </header>
+      <ol class="ulo">
+        <router-link to="/comicInfo"><li v-for="it in list">
+          {{it.title}}
+        </li>
+        </router-link>
+      </ol>
       <main>
         <h1>热门推荐</h1>
         <ul>
@@ -26,6 +32,8 @@ export default {
     return {
       value:"",
       arr:"",
+      txt:"",
+      list:""
     }
   },
   created(){
@@ -36,6 +44,18 @@ export default {
         _this.arr = data
        
       })
+  },
+  methods:{
+    getsearch(){
+      // http://m.ac.qq.com/search/smart?t=1497577934147&word=
+      var this_ = this;
+      Vue.axios.get("http://m.ac.qq.com/search/smart?t=1497577934147&word=" + this.txt).then((res)=> {
+        return res.data.data
+      }).then((data)=> {
+        this_.list = data
+       console.log(this_.list)
+      })
+    }
   }
  }
 </script>
@@ -67,6 +87,18 @@ export default {
  .mint-button--default{
   background-color: #b8bbbf;
  }
+ .ulo{
+ 
+  position: absolute;
+  top: 44px;
+  left: 25%;
+  width: 65%;
+  list-style: none;
+ }
+ .ulo li{
+  list-style: none;
+  font-size: 14px;
+ }
  main{
   min-height: 80vh;
  }
@@ -74,11 +106,11 @@ export default {
   font-size: 20px;
   color: #add;
  }
- ul{
+ main ul{
   list-style: none;
   height: 80vh;
  }
- li{
+ main li{
   float: left;
   font-size: 16px;
   margin: 10px 15px;

@@ -11,7 +11,7 @@
     <mt-field label="手机号" v-model="arr.msg" placeholder="请输入手机号" type="tel"></mt-field>
     <mt-field label="密码" v-model="arr.password" placeholder="请输入密码" type="password"></mt-field>
     <mt-field label="确认密码" v-model="arr.list" placeholder="请再次输入密码" type="password"></mt-field>
-    <router-link :to="{ name:'login',params:{ id:art } }"><mt-button class="registering" @click="reg" type="danger" size="large">注册</mt-button>
+    <router-link to="/login"><mt-button class="registering" @click="reg" type="danger" size="large">注册</mt-button>
     </router-link>
   </div>
   
