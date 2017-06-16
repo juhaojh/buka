@@ -74,7 +74,10 @@ export default new Router({
       name: 'register',
       component: Register
     },
-
+    {path:"/comicInfo",
+       name:"comicInfo",
+      component:ComicInfo
+    },
    
   ]
 })
